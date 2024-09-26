@@ -1,0 +1,207 @@
+input {
+    display: none;
+  }
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  $maincolor: red;
+  $main-padding: 10px;
+  
+  // ::root{
+  //     --color-primary: #333;
+  //     --color-secondary: #fff;
+  //     --color-tertiary: #ddd;
+  //     --transition-duration: 0.3s;
+  // }
+  // h1{
+  //     font-size: 3em;
+  //     text-align: center;
+  //     color: var(--color-primary);
+  //     transition: color var(--transition-duration);
+  // }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .menu_nav {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 1s;
+    transform: translateX(-100%);
+  
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    ul {
+      width: 70%;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      justify-content: space-between;
+      li {
+        margin-left: 10px;
+        a {
+          color: $maincolor;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  nav {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+      width: 70%;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      li {
+        margin-left: 10px;
+        a {
+          color: $maincolor;
+          text-decoration: none;
+        }
+      }
+    }
+    .fa-solid {
+      display: none;
+    }
+    input {
+      width: 200px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* here contact container styled*/
+  
+  // this is contact styled container
+  // this is contact styled container
+  #contact {
+    margin-top: 20px;
+    background-color: #f2f2f2;
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+  
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+      button {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        &:hover {
+          background-color: #9b8585;
+          color: #fff;
+        }
+      }
+    }
+  }
+  
+  #about {
+    margin-top: 20px;
+    background-color: #f2f2f2;
+    p {
+      padding: 20px;
+      text-align: justify;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .social-media {
+      display: flex;
+      justify-content: space-between;
+      a {
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        i {
+          font-size: 24px;
+          margin-right: 10px;
+        }
+        &:hover {
+          color: #9b8585;
+        }
+      }
+    }
+    .copyright {
+      text-align: center;
+      padding: 20px;
+      color: #999;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    nav {
+      ul {
+        flex-direction: column;
+        display: none;
+  
+        li {
+          margin-bottom: 10px;
+          a {
+            display: block;
+            text-align: center;
+            &:hover {
+              color: #9b8585;
+              text-decoration: none;
+              transition: color 0.3s ease;
+            }
+          }
+        }
+      }
+      .fa-solid {
+        display: block;
+        cursor: pointer;
+      }
+      
+    }
+  
+    input[type="checkbox"]:checked + .menu_nav {
+      transform: translateX(0);
+      transition: 1s;
+    }
+  }
+  
